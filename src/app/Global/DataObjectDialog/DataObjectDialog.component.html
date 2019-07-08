@@ -1,0 +1,53 @@
+<div class="app-popup ml-4 mr-4 mt-4">
+  <div class="app-popup-content text-center">
+    <div class="mb-4">
+      <h5>Add Data Object</h5>
+    </div>
+
+    <form [formGroup] = "dataObjectForm" (ngSubmit) = "onSubmit()">
+      <div class="mb-2">
+        <mat-form-field class="w-100" appearance="outline">
+          <mat-label>Object</mat-label>
+          <input matInput type="text" placeholder="Object" formControlName="object">
+        </mat-form-field>
+      </div>
+      
+      <div class="mb-2">
+        <mat-form-field class="w-100" appearance="outline">
+          <mat-label>Object Name</mat-label>
+          <input matInput type="text" placeholder="Object Name" formControlName="objectName">
+        </mat-form-field>
+      </div>
+      
+      <div class="mb-2">
+        <mat-form-field class="w-100" appearance="outline">
+          <mat-label>Object Data Type</mat-label>
+          <input matInput type="text" placeholder="Object Data Type" formControlName="objectDataType">
+        </mat-form-field>
+      </div>
+
+      <div class="mb-2">
+        <mat-form-field class="w-100" appearance="outline">
+          <mat-label>Object Sensitivity</mat-label>
+          <input matInput type="text" placeholder="Object Sensitivity" formControlName="objectSensitivity">
+        </mat-form-field>
+      </div>
+
+      <div class="mb-2">
+        <mat-form-field class="w-100" appearance="outline">
+          <mat-label>Object Hash Value</mat-label>
+          <input matInput type="text" placeholder="Object Hash Value" formControlName="objectHashValue">
+        </mat-form-field>
+      </div>
+          
+      <button mat-raised-button [disabled]="loading" color="accent" class="button-lg mb-3 mr-1" (click)="onSubmit">
+        Save
+        <img *ngIf="loading" class="pl-3" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+      </button>
+      
+      <button mat-raised-button [disabled]="loading" color="accent" class="button-lg mb-3 ml-1" (click)="dialogRef.close()">Cancel</button>
+
+    </form>
+
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<form [formGroup] = "loginForm" (ngSubmit) = "onSubmit()">
+  <div class="mb-4">
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" placeholder="Email" formControlName="email">
+    </mat-form-field>
+    <mat-error *ngIf="loginForm.controls['email'].hasError('required') && loginForm.controls['email'].touched">This field should not be empty.</mat-error>
+    <mat-error *ngIf="loginForm.controls['email'].hasError('pattern') && loginForm.controls['email'].touched && !loginForm.controls['email'].hasError('required')">Vennligst skriv inn en gyldig e-postadresse.</mat-error>
+  </div>
+  
+  <div class="mb-4">
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" placeholder="Password" formControlName="password">
+    </mat-form-field>
+    <mat-error *ngIf="loginForm.controls['password'].hasError('required') && loginForm.controls['password'].touched"> This field should not be empty.</mat-error>
+  </div>
+
+  
+  <div class="mb-3">
+    <mat-checkbox formControlName="keep">Keep me logged in</mat-checkbox>
+    <span fxFlex></span> <a [routerLink]="['/session/forgot-password']">Forgot Password?</a>
+  </div>
+  
+
+  <button mat-raised-button [disabled]="loading" color="accent" class="button-lg mb-3" type="submit">Log In</button>
+  <img *ngIf="loading" class="pl-3" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+  
+  <p>Don't have an account? <a class="accent-color" [routerLink]="['/session/signup']">Click here to create one</a></p>
+  
+</form>

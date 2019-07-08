@@ -1,0 +1,26 @@
+
+<div [dir]="isRtl" (scroll)="onScrollEvent($event)">
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav [(opened)]="aipomaService.sidenavOpen" class="sidebar-area" mode="over">
+      <mat-nav-list>
+        <div class="close-btn-sidebar">
+          <a href="javascript:void(0)" (click)="aipomaService.sidenavOpen = false">
+            <i class="material-icons">
+              close
+            </i>
+          </a>
+        </div>
+        <aipoma-SidebarMenu *ngFor="let item of menuItems.getMainMenu()" [item]="item"></aipoma-SidebarMenu>
+      </mat-nav-list>
+    </mat-sidenav>
+    
+    <ngx-toasta></ngx-toasta>
+    
+    <Header></Header>
+   
+    <div class="main">
+      <router-outlet></router-outlet>
+    </div>
+    <Footer></Footer>
+  </mat-sidenav-container>
+</div>

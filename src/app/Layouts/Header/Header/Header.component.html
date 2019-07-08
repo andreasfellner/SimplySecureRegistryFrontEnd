@@ -1,0 +1,37 @@
+<mat-toolbar color="primary" class="header-v1">
+  <mat-toolbar-row class="header-v1-top">
+    <div class="container">
+      <div fxLayout="row wrap" fxLayout="center center">
+        <div fxHide.xs="true" fxHide.sm="true" fxHide.md="true" fxFlex.md="33%" fxFlex.lg="33%" fxFlex.xl="33%">
+        </div>
+        <div class="logo-site" fxFlex.xs="40" fxFlex.sm="40" fxFlex.md="50" fxFlex.lg="33%" fxFlex.xl="33%">
+         <aipoma-AppLogo></aipoma-AppLogo>
+        </div>
+        <div fxFlex.xs="60" fxFlex.sm="60" fxFlex.md="50" fxFlex.lg="33%" fxFlex.xl="33%">
+          <span fxFlex></span>
+          <div class="list-flex user-tool">
+            <aipoma-HeaderUserProfileDropdown *ngIf="currentUser"></aipoma-HeaderUserProfileDropdown>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="header-v1-bottom main-menu-wrap">
+    <div class="container">
+      <div class="header-v1-bottom-inner">
+        <aipoma-Menu></aipoma-Menu>
+      </div>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="responsive-bar relative">
+      <div class="container">
+        <div fxLayoutAlign="space-between">
+          <button class="responsive-toggle" mat-icon-button (click)="toggleSidebar()">
+            <i class="material-icons">menu</i>
+          </button>
+        </div>
+      </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<aipoma-FixedHeader></aipoma-FixedHeader>

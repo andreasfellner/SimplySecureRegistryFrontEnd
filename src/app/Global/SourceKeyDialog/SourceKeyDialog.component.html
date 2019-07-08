@@ -1,0 +1,53 @@
+<div class="app-popup ml-4 mr-4 mt-4">
+  <div class="app-popup-content text-center">
+    <div class="mb-4">
+      <h5>Add Source Keys</h5>
+    </div>
+
+    <form [formGroup] = "sourceKeyForm" (ngSubmit) = "onSubmit()">
+      <div class="mb-2">
+        <mat-form-field class="w-100" appearance="outline">
+          <mat-label>Source Key</mat-label>
+          <input matInput type="text" placeholder="Source Key" formControlName="sourceKey">
+        </mat-form-field>
+      </div>
+      
+      <div class="mb-2">
+        <mat-form-field class="w-100" appearance="outline">
+          <mat-label>Device</mat-label>
+          <input matInput type="text" placeholder="Device" formControlName="device">
+        </mat-form-field>
+      </div>
+      
+      <div class="mb-2">
+        <mat-form-field class="w-100" appearance="outline">
+          <mat-label>Device Name</mat-label>
+          <input matInput type="text" placeholder="Device Name" formControlName="deviceName">
+        </mat-form-field>
+      </div>
+
+      <div class="mb-2">
+        <mat-form-field class="w-100" appearance="outline">
+          <mat-label>Application</mat-label>
+          <input matInput type="text" placeholder="Application" formControlName="application">
+        </mat-form-field>
+      </div>
+
+      <div class="mb-2">
+        <mat-form-field class="w-100" appearance="outline">
+          <mat-label>Application Name</mat-label>
+          <input matInput type="text" placeholder="Application Name" formControlName="applicationName">
+        </mat-form-field>
+      </div>
+          
+      <button mat-raised-button [disabled]="loading" color="accent" class="button-lg mb-3 mr-1" (click)="onSubmit">
+        Save
+        <img *ngIf="loading" class="pl-3" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+      </button>
+      
+      <button mat-raised-button [disabled]="loading" color="accent" class="button-lg mb-3 ml-1" (click)="dialogRef.close()">Cancel</button>
+
+    </form>
+
+  </div>
+</div>

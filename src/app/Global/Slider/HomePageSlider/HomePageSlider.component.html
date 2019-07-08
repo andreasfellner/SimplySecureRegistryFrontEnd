@@ -1,0 +1,17 @@
+<div>
+   <ngx-slick-carousel class="carousel home-3-slider" [config]="slideConfig">
+      <div ngxSlickItem *ngFor="let slide of slides">
+         <div class="home-img-wrapper relative">
+            <img class="home-img-wrapper relative" [src]="slide.img" alt="">
+            <div class="slider-content-v3" fxLayout="column" fxLayoutAlign="center center">
+               <div class="slider-content-v3-inner m-auto">
+                  <h2 class="font-bold mb-4 text-inverse">{{slide.heading_one}}</h2>
+                  <p>{{slide.content}}</p>
+               </div>
+            </div>   
+         </div>       
+      </div>
+   </ngx-slick-carousel>
+</div>
+
+    

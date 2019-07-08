@@ -1,0 +1,20 @@
+<footer>
+  <div class="footer-v1">
+    <div class="container">
+      <div fxLayout="row wrap" fxLayoutAlign="center" class="col-gap">
+        <div  *ngFor="let menu of menuItems.getFooterOneMenu()">
+            <mat-list-item *ngIf="menu.type == 'link'"><a [routerLink]="['/'+menu.state]" routerLinkActive="active-link"> {{menu.name}}</a></mat-list-item>
+        </div>
+      </div>
+      <hr>
+      <div class="footer-bottom-v1">
+        <div fxLayout="row wrap" fxLayoutAlign="flex-end" class="col-gap">
+          <div fxFlex.xs="100" class="text-right">
+              <p>&copy; AIPOMA 2019</p>
+              <p>All rights reserved</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

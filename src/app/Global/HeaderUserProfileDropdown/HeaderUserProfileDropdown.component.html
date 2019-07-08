@@ -1,0 +1,11 @@
+<button mat-stroked-button class="log-in-user" [matMenuTriggerFor]="loginuser">
+  <i class="material-icons mr-1">account_circle</i>
+  {{email}}
+  <i class="material-icons mr-1">arrow_drop_down</i>
+</button>
+<mat-menu #loginuser="matMenu">
+  <button mat-menu-item fxLayoutAlign="start center" [routerLink]="['/account/profile']"><i class="material-icons mr-1">account_circle</i> <span>Profile</span>
+  </button>
+  <button mat-menu-item [routerLink]="['/account/profile']"><i class="material-icons mr-1">settings</i><span>Account</span></button>
+  <button mat-menu-item (click)="logout()"><i class="material-icons mr-1">power_settings_new</i><span>Logout</span></button>
+</mat-menu>
