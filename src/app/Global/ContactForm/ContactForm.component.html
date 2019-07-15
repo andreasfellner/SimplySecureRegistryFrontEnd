@@ -20,5 +20,5 @@
       <textarea matInput placeholder="Leave a Message" formControlName="message"></textarea>
    </mat-form-field>
    <mat-error *ngIf="contactForm.controls['message'].hasError('required') && contactForm.controls['message'].touched"> This field should not be empty.</mat-error>
-   <button mat-raised-button color="accent" class="button-lg" type="submit">Send Messsage</button>
+   <button mat-raised-button color="primary" class="button-lg" type="submit">Send Messsage</button>
 </form>

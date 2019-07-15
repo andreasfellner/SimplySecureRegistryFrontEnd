@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'aipoma-PageTitle',
+  selector: 'app-PageTitle',
   templateUrl: './PageTitle.component.html',
   styleUrls: ['./PageTitle.component.scss']
 })

@@ -113,10 +113,8 @@ export class ApiService implements OnInit {
   public getSourceKeys() {
 
     console.log('getSourceKeys', this.httpOptions);
-    //let params = new URLSearchParams();
-    //params.append("email", this.currentUserValue.email)
 
-    let result = this.http.get<SourceKey[]>(`${environment.apiUrl}/api/getSourceKeys`, this.httpOptions )
+    let result = this.http.get<SourceKey[]>(`${environment.apiUrl}/api/getSourceKeys`, this.httpOptions)
       .pipe(map(result => {
         return result;
       }));
@@ -165,10 +163,12 @@ export class ApiService implements OnInit {
 
   public addDataObject(dataObject: DataObject) {
 
-    return this.http.post<any>(`${environment.apiUrl}/api/addDataObject`, JSON.stringify(dataObject), this.httpOptions)
+    let result = this.http.post<any>(`${environment.apiUrl}/api/addDataObject`, JSON.stringify(dataObject), this.httpOptions)
       .pipe(map(result => {
         return result;
       }));
+
+      return result;
   }
 
 }

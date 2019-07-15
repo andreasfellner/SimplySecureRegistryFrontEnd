@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AipomaService } from '../../../services/services';
+import { AppService } from '../../../services/services';
 
 @Component({
   selector: 'app-PrivacyPolicy',
@@ -10,10 +10,10 @@ export class PrivacyPolicyComponent implements OnInit {
 
    privacyPolicyData : any;
 
-   constructor(public aipomaService : AipomaService) { }
+   constructor(public appService : AppService) { }
 
    ngOnInit() {
-      this.privacyPolicyData = this.aipomaService.getPrivacyPolicy();
+      this.privacyPolicyData = this.appService.getPrivacyPolicy();
    }
 
 }

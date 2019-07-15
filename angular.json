@@ -3,7 +3,7 @@
   "version": 2,
   "newProjectRoot": "projects",
   "projects": {
-    "aipoma": {
+    "app": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -60,18 +60,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "aipoma:build"
+            "browserTarget": "app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "aipoma:build:production"
+              "browserTarget": "app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "aipoma:build"
+            "browserTarget": "app:build"
           }
         },
         "test": {
@@ -123,7 +123,7 @@
         }
       }
     },
-    "aipoma-e2e": {
+    "app-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -131,11 +131,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "aipoma:serve"
+            "devServerTarget": "app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "aipoma:serve:production"
+              "devServerTarget": "app:serve:production"
             }
           }
         },
@@ -151,5 +151,5 @@
       }
     }
   },
-  "defaultProject": "aipoma"
+  "defaultProject": "app"
 }

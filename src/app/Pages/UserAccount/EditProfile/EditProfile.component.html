@@ -40,7 +40,7 @@
             <mat-error *ngIf="info.get('email').hasError('required') && info.get('email').touched">This field should not be empty.</mat-error>
             <mat-error *ngIf="info.get('email').hasError('pattern') && info.get('email').touched">Please enter a valid email.</mat-error>
           </mat-form-field>
-          <button mat-raised-button color="accent" (click)="submitProfileInfo()">Save</button>
+          <button mat-raised-button color="primary" (click)="submitProfileInfo()">Save</button>
         </div>
       </form>
     </div>
@@ -80,7 +80,7 @@
             <input matInput placeholder="Country" formControlName="country">
             <mat-error *ngIf="address.get('country').hasError('required') && address.get('country').touched">This field should not be empty.</mat-error>
           </mat-form-field>
-          <button mat-raised-button color="accent" (click)="submitAddress()">Save</button>
+          <button mat-raised-button color="primary" (click)="submitAddress()">Save</button>
         </div>
       </form>
     </div>
@@ -153,7 +153,7 @@
                 </mat-form-field>
           </div>
     </div>
-    <button mat-raised-button color="accent" (click)="submitCard()">Save</button>
+    <button mat-raised-button color="primary" (click)="submitCard()">Save</button>
     </form>
   </div>
   <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50" class="edit-profile" style="background-image: url(assets/images/card-edit.png)">

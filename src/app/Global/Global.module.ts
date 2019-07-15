@@ -44,7 +44,10 @@ import { ConfirmationPopupComponent } from './ConfirmationPopup/ConfirmationPopu
 
 import { CommonSignUpComponent } from './CommonSignUp/CommonSignUp.component';
 import { SourceKeyDialogComponent } from './SourceKeyDialog/SourceKeyDialog.component';
-import { DataObjectDialogComponent } from './DataObjectDialog/DataObjectDialog.component'
+import { DataObjectDialogComponent } from './DataObjectDialog/DataObjectDialog.component';
+import { AppLogoFixedComponent } from './AppLogoFixed/AppLogoFixed.component';
+import { CommonForgotPasswordComponent } from './CommonForgotPassword/CommonForgotPassword.component';
+import { LanguageDropDownComponent } from './LanguageDropDown/LanguageDropDown.component'
 
 
 @NgModule({
@@ -87,6 +90,7 @@ import { DataObjectDialogComponent } from './DataObjectDialog/DataObjectDialog.c
       ContactFormComponent,
       AboutInfoComponent,
       CommonSignInComponent,
+      CommonForgotPasswordComponent,
       SourceKeyDialogComponent,
       CommonSignUpComponent,
       HeaderUserProfileDropdownComponent,
@@ -94,18 +98,23 @@ import { DataObjectDialogComponent } from './DataObjectDialog/DataObjectDialog.c
       HomePageSliderComponent,
       ConfirmationPopupComponent,
       CommonSignUpComponent,
-      DataObjectDialogComponent      
+      DataObjectDialogComponent,
+      AppLogoFixedComponent,
+      LanguageDropDownComponent,
    ],
    exports: [
       PageTitleComponent,
       ContactFormComponent,
       AboutInfoComponent,
       CommonSignInComponent,
+      CommonForgotPasswordComponent,
       SourceKeyDialogComponent,
       CommonSignUpComponent,
       HeaderUserProfileDropdownComponent,
       AppLogoComponent,
-      HomePageSliderComponent
+      AppLogoFixedComponent,
+      HomePageSliderComponent,
+      LanguageDropDownComponent
    ],
    entryComponents : [
       ConfirmationPopupComponent,

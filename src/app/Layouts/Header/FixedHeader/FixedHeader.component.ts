@@ -1,21 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { AipomaService } from '../../../services/services';
+import { AppService, ApiService } from '../../../services/services';
+import { User } from 'src/app/services/models';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'aipoma-FixedHeader',
-  templateUrl: './FixedHeader.component.html',
-  styleUrls: ['./FixedHeader.component.scss']
+   selector: 'app-FixedHeader',
+   templateUrl: './FixedHeader.component.html',
+   styleUrls: ['./FixedHeader.component.scss']
 })
 export class FixedHeaderComponent implements OnInit {
 
-  constructor(private aipomaService : AipomaService) { }
+   mode: string = "Fixed";
+   currentUser: User;
+   constructor(private appService: AppService,
+      public translate: TranslateService,
+      private authenticationService: ApiService) {
 
-  ngOnInit() {
-  }
+      this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+   }
 
-  public toggleSidebar()
-   {
-      this.aipomaService.sidenavOpen = !this.aipomaService.sidenavOpen;
+   ngOnInit() {
+   }
+
+   public toggleSidebar() {
+      this.appService.sidenavOpen = !this.appService.sidenavOpen;
    }
 
 }

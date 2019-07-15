@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AipomaService } from '../../../services/services';
+import { AppService } from '../../../services/services';
 
 @Component({
   selector: 'app-Faq',
@@ -10,10 +10,10 @@ export class FaqComponent implements OnInit {
 
    faqData : any 
 
-   constructor(public aipomaService : AipomaService) { }
+   constructor(public appService : AppService) { }
 
    ngOnInit() {
-      this.faqData = this.aipomaService.getFaq();
+      this.faqData = this.appService.getFaq();
    }
 
 }

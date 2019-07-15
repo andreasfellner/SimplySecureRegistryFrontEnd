@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService, AipomaService } from '../../services/services';
+import { ApiService, AppService } from '../../services/services';
 import { DataObject } from '../../services/models';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -20,7 +20,7 @@ export class DataObjectDialogComponent implements OnInit {
   constructor(public dialogRef: MatDialogRef<DataObjectDialogComponent>,
     private formGroup: FormBuilder,
     private apiService: ApiService,
-    public aipomaService: AipomaService) {
+    public appService: AppService) {
 
 
   }
@@ -53,23 +53,21 @@ export class DataObjectDialogComponent implements OnInit {
       dataObject.ssro_hash_value = this.f.objectHashValue.value;
       dataObject.ssru = this.apiService.currentUserValue.email;
 
-      this.apiService.addDataObject(dataObject)
-        .pipe(first())
+      this.apiService.addDataObject(dataObject).pipe(first())
         .subscribe(
           result => {
 
             this.dialogRef.close();
-            console.log('DataObjectDialog result', result);
 
             if (result.success == true) {
               
-
+              this.apiService.getDataObjects();
             }
             else {
               
               let message = result.error;
               console.log('message', message);
-              this.aipomaService.confirmationPopup(message);
+              this.appService.confirmationPopup(message);
             }
 
             this.loading = false;

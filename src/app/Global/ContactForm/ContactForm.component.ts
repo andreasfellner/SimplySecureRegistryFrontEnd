@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder,FormArray, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'aipoma-ContactForm',
+  selector: 'app-ContactForm',
   templateUrl: './ContactForm.component.html',
   styleUrls: ['./ContactForm.component.scss']
 })

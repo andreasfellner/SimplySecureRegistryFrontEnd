@@ -19,6 +19,8 @@ export class DataObjectService {
     this.eventDataUpdated.next(true);
   }
 
+ 
+
   public getData()
   {
     return this.dataObjects;

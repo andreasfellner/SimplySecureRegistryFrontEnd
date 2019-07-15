@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 
 @Component({
-  selector: 'aipoma-HomePageSlider',
+  selector: 'app-HomePageSlider',
   templateUrl: './HomePageSlider.component.html',
   styleUrls: ['./HomePageSlider.component.scss']
 })

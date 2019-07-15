@@ -1,2 +1,2 @@
-# SimpleSecureRegistry Frontend
+# SimplySecure
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertService, ApiService, AipomaService } from '../../services/services';
+import { ApiService, AppService } from '../../services/services';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
@@ -19,7 +19,7 @@ export class CommonSignInComponent implements OnInit {
   constructor(private formGroup : FormBuilder,
     private router: Router,
     private apiService: ApiService,
-    public aipomaService : AipomaService)
+    public appService : AppService)
     {
      
       if (this.apiService.currentUserValue) { 
@@ -34,7 +34,7 @@ export class CommonSignInComponent implements OnInit {
         keep       : [false,{validators:[Validators.required]}]
       })
 
-      this.returnUrl = "/home";
+      this.returnUrl = "/";
   }
   
   get f() { return this.loginForm.controls; }
@@ -61,7 +61,7 @@ export class CommonSignInComponent implements OnInit {
                   console.log('result',result);
                   let message = result.error;
                   console.log('message', message);
-                  this.aipomaService.confirmationPopup(message);
+                  this.appService.confirmationPopup(message);
                 }
 
                 this.loading = false;

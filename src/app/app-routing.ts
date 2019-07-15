@@ -1,21 +1,16 @@
 import { Routes } from '@angular/router';
 import { MainComponent } from './Main/Main.component';
-import { HomeComponent } from './Pages/Home/Home/Home.component';
 import { AuthGuard } from './services/guards';
 
 export const AppRoutes: Routes = [
    {
       path: '',
-      redirectTo: 'home',
+      redirectTo: 'sourceKeys',
       pathMatch: 'full',
    }, {
       path: '',
       component: MainComponent,
       children: [
-         {
-            path: 'home',
-            component: HomeComponent, canActivate: [AuthGuard]
-         },
          {
             path: 'sourceKeys',
             loadChildren: './Pages/SourceKeys/sourceKeys.module#SourceKeyModule', canActivate: [AuthGuard]
@@ -23,6 +18,10 @@ export const AppRoutes: Routes = [
          {
             path: 'dataObject',
             loadChildren: './Pages/DataObject/dataObject.module#DataObjectModule', canActivate: [AuthGuard]
+         },
+         {
+            path: 'checkout',
+            loadChildren: './Pages/Checkout/Checkout.module#CheckoutModule', canActivate: [AuthGuard]
          },
          {
             path: 'session',

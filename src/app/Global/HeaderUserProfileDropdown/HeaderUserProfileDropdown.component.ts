@@ -4,7 +4,7 @@ import { User } from '../../services/models';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'aipoma-HeaderUserProfileDropdown',
+  selector: 'app-HeaderUserProfileDropdown',
   templateUrl: './HeaderUserProfileDropdown.component.html',
   styleUrls: ['./HeaderUserProfileDropdown.component.scss']
 })

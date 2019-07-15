@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertService, ApiService, AipomaService } from '../../services/services';
+import { ApiService, AppService } from '../../services/services';
 import { SourceKey } from '../../services/models';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -21,7 +21,7 @@ export class SourceKeyDialogComponent implements OnInit {
   constructor(public dialogRef: MatDialogRef<SourceKeyDialogComponent>,
     private formGroup: FormBuilder,
     private apiService: ApiService,
-    public aipomaService: AipomaService) {
+    public appService: AppService) {
 
 
   }
@@ -69,13 +69,13 @@ export class SourceKeyDialogComponent implements OnInit {
 
                 if(result.success == true)
                 {                  
-                  
+                  this.apiService.getSourceKeys();
                 }
                 else{
                   
                   let message = result.error;
                   console.log('message', message);
-                  this.aipomaService.confirmationPopup(message);
+                  this.appService.confirmationPopup(message);
                 }
 
               });

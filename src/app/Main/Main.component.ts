@@ -3,7 +3,7 @@ import { Router, NavigationEnd } from '@angular/router';
 import { Observable, of as observableOf, interval ,  Subscription } from 'rxjs';
 import { map, take, delay, withLatestFrom, finalize, tap } from 'rxjs/operators';
 import { LoadingBarService } from '@ngx-loading-bar/core';
-import { AipomaService } from '../services/services';
+import { AppService } from '../services/services';
 import { MenuItems } from '../Core/menu/menu-items/menu-items';
 import { Directionality } from '@angular/cdk/bidi';
 import { Meta, Title } from "@angular/platform-browser";
@@ -21,13 +21,13 @@ export class MainComponent implements OnInit {
    currentUrl : any; 
 
    constructor(private loader : LoadingBarService,
-               public aipomaService : AipomaService, 
+               public appService : AppService, 
                public menuItems: MenuItems,
                dir: Directionality,
                private router: Router,
                meta: Meta, title: Title) { 
 
-      title.setTitle('AIPOMA');
+      title.setTitle('SimplySecure');
 
       meta.addTags([
          { name: 'author',   content: 'The IRON Network'},
@@ -60,7 +60,7 @@ export class MainComponent implements OnInit {
    }
 
    public hideSideNav() {
-      this.aipomaService.sidenavOpen = false;
+      this.appService.sidenavOpen = false;
    }
 
   

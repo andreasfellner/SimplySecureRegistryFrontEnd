@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { AipomaService, DataObjectService } from 'src/app/services/services';
+import { AppService, DataObjectService } from 'src/app/services/services';
 import { GridComponent } from '@syncfusion/ej2-angular-grids';
 import { DataObjectDialogComponent } from 'src/app/Global/DataObjectDialog/DataObjectDialog.component';
 import { MatDialogRef, MatDialog } from '@angular/material';
@@ -13,14 +13,14 @@ import { MatDialogRef, MatDialog } from '@angular/material';
 export class DataObjectComponent implements OnInit {
 
   public data: object[];
-  @ViewChild('grid' , { static: false }) public grid: GridComponent;
+  @ViewChild('grid') public grid: GridComponent;
 
   constructor(private dataObjectService: DataObjectService,
-              private aipomaService: AipomaService,
+    private appService: AppService,
     private dialog: MatDialog) {
 
   }
-  
+
   ngOnInit() {
     this.updateInfo();
     this.dataObjectService.eventDataUpdated.subscribe(value => {
@@ -35,8 +35,7 @@ export class DataObjectComponent implements OnInit {
     this.data = this.dataObjectService.getData();
   }
 
-  public addDataObject()
-  {
+  public addDataObject() {
     let columnSelectorPopup: MatDialogRef<DataObjectDialogComponent>;
     columnSelectorPopup = this.dialog.open(DataObjectDialogComponent);
     return columnSelectorPopup.afterClosed();

@@ -1,11 +1,17 @@
-<mat-toolbar color="primary" class="aipoma-fixed-header">
+<mat-toolbar color="primary" class="app-fixed-header">
   <mat-toolbar-row>
     <div class="container">
-      <div fxLayoutAlign="space-between">
+      <div fxLayoutAlign="space-between center">
         <div class="logo-site">
-          <aipoma-AppLogo></aipoma-AppLogo>
+          <app-LogoFixed></app-LogoFixed>
         </div>
-        <aipoma-Menu></aipoma-Menu>
+
+        <button *ngIf="!currentUser" mat-stroked-button class="log-in-button" [routerLink]="['/session/signin']">
+          <i class="material-icons mr-2">account_circle</i>
+          Login
+        </button>
+
+        <app-Menu *ngIf="currentUser"></app-Menu>
         <button class="responsive-toggle" mat-icon-button (click)="toggleSidebar()">
           <i class="material-icons">menu</i>
         </button>

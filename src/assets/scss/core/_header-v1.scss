@@ -250,14 +250,14 @@ body .mat-menu-panel {
 }
 
 @media(min-width:960px) {
-  .aipoma-fixed-header .responsive-toggle {
+  .app-fixed-header .responsive-toggle {
     display: none;
   }
 }
 
 @media(max-width:959px) {
-  .aipoma-fixed-header {
-    aipoma-Menu {
+  .app-fixed-header {
+    app-Menu {
       display: none;
     }
 
@@ -284,8 +284,8 @@ body .mat-menu-panel {
 @media(max-width:767px) {
   .user-tool {
 
-    aipoma-headercart,
-    aipoma-wishlist,
+    app-headercart,
+    app-wishlist,
     .log-in-user {
       transform: scale(0.8);
     }
@@ -630,7 +630,7 @@ body .mat-menu-panel {
   background: #f1f1f1;
 }
 
-.aipoma-fixed-header {
+.app-fixed-header {
   position: fixed;
   top: 0;
   left: 0;
@@ -647,7 +647,7 @@ body .mat-menu-panel {
 }
 
 .header-fixed {
-  .aipoma-fixed-header {
+  .app-fixed-header {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -684,7 +684,7 @@ body .mat-menu-panel {
 }
 
 @media (max-width:991px) {
-  .aipoma-fixed-header {
+  .app-fixed-header {
     .container {
       width: 100%;
     }

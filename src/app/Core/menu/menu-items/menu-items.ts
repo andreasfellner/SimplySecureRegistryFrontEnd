@@ -13,12 +13,6 @@ export interface Menu {
 
 const HeaderItems= [
   {
-    state: "home",
-    name: "HOME",
-    type: 'link',
-    icon: "home"
-  },
-  {
     state:'sourceKeys',
     name:"SOURCE KEYS",
     type:"link",
@@ -29,6 +23,28 @@ const HeaderItems= [
     name:"DATA OBJECT",
     type:"link",
     icon: 'party_mode'
+  },
+  {
+    state: "checkout/payment",
+    name : "BILLING INFO",
+    type: "link",
+    icon: "pages"
+    /*
+    children: [
+      {  
+        state: 'checkout', 
+        name: 'CHECKOUT',
+        type: 'link',
+        icon: 'arrow_right_alt'
+      },
+      {  
+        state: 'checkout/payment', 
+        name: 'PAYMENT',
+        type: 'link',
+        icon: 'arrow_right_alt'
+      }
+    ]
+    */
   },
   {
     state:'contact',

@@ -42,17 +42,23 @@ import { AppRoutes } from './app-routing';
 import { GlobalModule } from './Global/Global.module';
 import { MenuItems } from './Core/menu/menu-items/menu-items';
 
-import { AipomaService } from './services/services';
+import { AppService } from './services/services';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './Main/Main.component';
 import { HeaderComponent } from './Layouts/Header/Header/Header.component';
 import { FooterComponent } from './Layouts/Footer/Footer.component';
 import { MenuComponent } from './Layouts/Menu/Menu/Menu.component';
-import { HomeComponent } from './Pages/Home/Home/Home.component';
 import { SideBarMenuComponent } from './Layouts/Menu/SidebarMenu/SidebarMenu.component';
 import { FixedHeaderComponent } from './Layouts/Header/FixedHeader/FixedHeader.component';
 import { TreeGridModule, PageService, SortService, FilterService } from '@syncfusion/ej2-angular-treegrid';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+/********** Custom option for ngx-translate ******/
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -62,11 +68,10 @@ import { TreeGridModule, PageService, SortService, FilterService } from '@syncfu
     FooterComponent,
     MenuComponent,
     SideBarMenuComponent,
-    HomeComponent,
     FixedHeaderComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({appId: 'aipoma-seo-pre'}),
+    BrowserModule.withServerTransition({appId: 'app-seo-pre'}),
     BrowserAnimationsModule,
     RouterModule.forRoot(AppRoutes, {onSameUrlNavigation: 'reload'}),
     GlobalModule,
@@ -103,11 +108,18 @@ import { TreeGridModule, PageService, SortService, FilterService } from '@syncfu
     ToastaModule.forRoot(),
     BidiModule,
     SlickCarouselModule,
-    TreeGridModule
+    TreeGridModule,
+    TranslateModule.forRoot({
+      loader: {
+         provide: TranslateLoader,
+         useFactory: createTranslateLoader,
+         deps: [HttpClient]
+      }
+   }),
   ],
    providers: [
       MenuItems,
-      AipomaService,
+      AppService,
       PageService,
       SortService,
       FilterService

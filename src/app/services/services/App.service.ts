@@ -11,7 +11,7 @@ import { ConfirmationPopupComponent } from '../../Global/ConfirmationPopup/Confi
    providedIn: 'root'
  })
 
-export class AipomaService {
+export class AppService {
 
    sidenavOpen                 : boolean = false;
    paymentSidenavOpen          : boolean = false;
@@ -24,6 +24,7 @@ export class AipomaService {
    tax       : number = 27.95;
 
    localStorageNotificationItems : any;
+   localStorageCartProducts : any;
    localStorageWishlist : any;
    navbarCartCount : number = 0;
    navbarWishlistProdCount = 0;
@@ -67,7 +68,7 @@ export class AipomaService {
       let termCondition : any;
       termCondition = [
          {
-            "content":"<p> Upon joining or viewing AIPOMA services or any of the services AIPOMA is a part of or provides, you are agreeing to be bound by the following terms and conditions ('Terms of Service') </p>",
+            "content":"<p> Upon joining or viewing SimplySecure services or any of the services SimplySecure is a part of or provides, you are agreeing to be bound by the following terms and conditions ('Terms of Service') </p>",
             "name":""
          },
          {
@@ -75,11 +76,11 @@ export class AipomaService {
             "name":"1. Kontovilkår "
          },
          {
-            "content":" <h6>2.1 AIPOMA Account</h6> <ol> <li> Med forbehold for område 2.1.2, vil den enkelte som godtar Tjenesten, være avtalt part av grunnene til våre Servicevilkår og vil være den som er godkjent for å benytte en sammenligningskonto vi kan gi til Kontoinnehaveren angående Tjenesten. </li> <li> Hvis du godtar Tjenesten til fordel for sjefen din, bør sjefen din være Account Eier. På sjansen for at du aksepterer å godta Tjenesten for din leder, snakker du på det tidspunktet og garanterer at du har spesialisten å knytte sjefen din til våre brukervilkår. </li> </ol>",
+            "content":" <h6>2.1 SimplySecure Account</h6> <ol> <li> Med forbehold for område 2.1.2, vil den enkelte som godtar Tjenesten, være avtalt part av grunnene til våre Servicevilkår og vil være den som er godkjent for å benytte en sammenligningskonto vi kan gi til Kontoinnehaveren angående Tjenesten. </li> <li> Hvis du godtar Tjenesten til fordel for sjefen din, bør sjefen din være Account Eier. På sjansen for at du aksepterer å godta Tjenesten for din leder, snakker du på det tidspunktet og garanterer at du har spesialisten å knytte sjefen din til våre brukervilkår. </li> </ol>",
             "name":"2. Kontoaktivering"
          },
          {
-            "content":" <h6>Du må lese, godta og godta alle vilkårene i disse vilkårene, inkludert AUP og personvernreglene før du kan bli medlem av AIPOMA.</h6> <ol> <li> Teknisk støtte er gitt til alle kontoinnehavere og er kun tilgjengelig via e-post og live chat. </li> <li> Servicevilkårene bør være representert av og oversatt i henhold til lovene i staten Illinois og de amerikanske lovgivningen som er relevante i det, uten hensyn til lovens krav. Samlingene unalterably og genuint underkastes eliten avdelingen av domstolene i staten Illinois som for enhver debatt eller sak som kommer ut av eller om vilkårene for bruk. FNs konvensjon om kontrakter for internasjonal salg av varer vil ikke ha betydning for disse vilkårene og er dermed eksplisitt unngått.</li>",
+            "content":" <h6>Du må lese, godta og godta alle vilkårene i disse vilkårene, inkludert AUP og personvernreglene før du kan bli medlem av SimplySecure.</h6> <ol> <li> Teknisk støtte er gitt til alle kontoinnehavere og er kun tilgjengelig via e-post og live chat. </li> <li> Servicevilkårene bør være representert av og oversatt i henhold til lovene i staten Illinois og de amerikanske lovgivningen som er relevante i det, uten hensyn til lovens krav. Samlingene unalterably og genuint underkastes eliten avdelingen av domstolene i staten Illinois som for enhver debatt eller sak som kommer ut av eller om vilkårene for bruk. FNs konvensjon om kontrakter for internasjonal salg av varer vil ikke ha betydning for disse vilkårene og er dermed eksplisitt unngått.</li>",
             "name":"3. Generelle betingelser"
          }
       ];

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService, AipomaService } from '../../services/services';
+import { ApiService, AppService } from '../../services/services';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
@@ -19,7 +19,7 @@ export class CommonSignUpComponent implements OnInit {
   returnUrl: string;
 
   constructor(private apiService: ApiService,
-              private aipomaService: AipomaService,
+              private appService: AppService,
               private router: Router,
               private formGroup : FormBuilder) { }
 
@@ -64,7 +64,7 @@ export class CommonSignUpComponent implements OnInit {
                     console.log('result',result);
                     let message = result.error;
                     console.log('message', message);
-                    this.aipomaService.confirmationPopup(message);
+                    this.appService.confirmationPopup(message);
                   }
                 });
     } 

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'aipoma-AboutInfo',
+  selector: 'app-AboutInfo',
   templateUrl: './AboutInfo.component.html',
   styleUrls: ['./AboutInfo.component.scss']
 })

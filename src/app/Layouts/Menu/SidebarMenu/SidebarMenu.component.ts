@@ -1,10 +1,10 @@
 import { Component, HostBinding, OnInit, Input} from '@angular/core';
 import { Router } from '@angular/router';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { AipomaService } from '../../../services/services';
+import { AppService } from '../../../services/services';
 
 @Component({
-  selector: 'aipoma-SidebarMenu',
+  selector: 'app-SidebarMenu',
   templateUrl: './SidebarMenu.component.html',
   styleUrls: ['./SidebarMenu.component.scss'],
   animations: [
@@ -25,7 +25,7 @@ export class SideBarMenuComponent implements OnInit {
    @HostBinding('attr.aria-expanded') ariaExpanded = this.expanded;
 
    constructor(public router: Router, 
-               public aipomaService: AipomaService) {
+               public appService: AppService) {
 
       if (this.depth === undefined) {
          this.depth = 0;
@@ -42,7 +42,7 @@ export class SideBarMenuComponent implements OnInit {
          } else {
             this.router.navigate([item.state],{ queryParams:{ category: item.queryState }});
          }
-         this.aipomaService.sidenavOpen = false;
+         this.appService.sidenavOpen = false;
       }
       if (item.children && item.children.length) {
          this.expanded = !this.expanded;

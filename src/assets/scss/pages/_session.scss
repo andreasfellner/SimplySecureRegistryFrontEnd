@@ -1,7 +1,17 @@
 .sign-in-image {
-  background-image: url("/assets/images/login-img.jpg");
+  
   background-size: cover;
-  padding: 18rem 0;
+  background-color: #2261ba;
+  object-fit: cover;
+  background-image: url("/assets/images/login-img.jpg");
+
+  width: 720px !important; /*510px !important; */
+  height: 600px !important; /*510px !important; */
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .register-image {
@@ -30,7 +40,10 @@
   }
 
   .form-margin {
-    margin-left: -40px;
+    margin-left: -0px;
+    height: 100%;
+    display: block;
+    //background: white;
   }
 }
 

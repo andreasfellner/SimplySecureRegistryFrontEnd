@@ -7,8 +7,8 @@
 @include mat-core();
 
 // Define the default theme (same as the example above).
-$my-theme-primary: mat-palette($mat-blue-grey, 300);
-$my-theme-accent:  mat-palette($mat-deep-orange, 500);
+$my-theme-primary: mat-palette($mat-indigo, 600);
+$my-theme-accent:  mat-palette($mat-deep-orange, 600);
 $my-light-theme:   mat-light-theme($my-theme-primary, $my-theme-accent);
 
 // Include the default theme styles.
@@ -45,6 +45,15 @@ $accent: mat-color($my-theme-accent);
 .accent-color{
   color: $accent;
 }
+
+.white-color{
+  color: white;
+}
+
+.grey-color{
+  color: #ccc;
+}
+
 
 .accent-bg{
   background: $accent;

@@ -11,7 +11,7 @@
   </span>
 </a>
 <div *ngIf="expanded" class="responsive-menu-side">
-  <aipoma-SidebarMenu *ngFor="let child of item.children" [item]="child" [depth]="depth+1">
-  </aipoma-SidebarMenu>
+  <app-SidebarMenu *ngFor="let child of item.children" [item]="child" [depth]="depth+1">
+  </app-SidebarMenu>
 </div>
 

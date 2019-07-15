@@ -5,7 +5,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { MenuItems } from '../../../Core/menu/menu-items/menu-items';
 
 @Component({
-  selector: 'aipoma-Menu',
+  selector: 'app-Menu',
   templateUrl: './Menu.component.html',
   styleUrls: ['./Menu.component.scss'],
   animations: [

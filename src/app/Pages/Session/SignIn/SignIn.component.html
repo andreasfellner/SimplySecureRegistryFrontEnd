@@ -1,19 +1,28 @@
-<div class="inner-container bg-white section-gap-lg">
+<div class="inner-container bg-primary section-gap-lg">
   <div class="container">
-    <div fxLayout='row wrap' fxLayoutAlign="center center">
-      <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="80" fxFlex.lg="70" fxFlex.xl="70">
-        <div fxLayout='row wrap' fxLayoutAlign="center center">
-          <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
-            <div class="form-img sign-in-image">
+    <div fxLayout='row wrap' class="col-gap" fxLayoutAlign="center center">
+      <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="90" fxFlex.lg="80" fxFlex.xl="80">
+        <mat-card class="form-card" fxLayout='row wrap' fxLayoutAlign="center center">
+          <div class="sign-in-image" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="65" fxFlex.lg="65" fxFlex.xl="65">
+            <div class="mt-4 ml-4" fxLayout='column' fxLayoutAlign="flex-start flex-start">
+              <div><span class="white-color">Decide</span> <span class="accent-color">HLb</span> </div>
+              <div class="signin-right-text">
+                <h2 class="white-color ml-4">Decide faster</h2><br>
+                <h4 class="grey-color ml-4">So you can do more</h4>
+              </div>
+              <div class="mt-4 mb-4 p-text" fxLayout='row' fxLayoutAlign="center center">
+                <i class="material-icons accent-color mb-1">fiber_manual_record</i>
+                <span class="ml-2">What is happy?</span>
+              </div>
             </div>
           </div>
-          <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
-            <mat-card class="sign-in-form form-margin">
-              <h4>User Sign In</h4>
+          <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="35" fxFlex.lg="35" fxFlex.xl="35">
+            <div class="form-margin">
+              <h4 class="primary-color ml-1">Log in</h4>
               <app-SignIn></app-SignIn>
-            </mat-card>
+            </div>
           </div>
-        </div>
+        </mat-card>
       </div>
     </div>
   </div>

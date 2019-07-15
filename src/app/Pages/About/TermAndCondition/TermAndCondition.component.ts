@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AipomaService } from '../../../services/services';
+import { AppService } from '../../../services/services';
 
 @Component({
   selector: 'app-TermAndCondition',
@@ -10,10 +10,10 @@ export class TermAndConditionComponent implements OnInit {
 
    termContions : any ;
 
-   constructor(public aipomaService: AipomaService) { }
+   constructor(public appService: AppService) { }
 
    ngOnInit() {
-      this.termContions = this.aipomaService.getTermCondition();
+      this.termContions = this.appService.getTermCondition();
    }
 
 }

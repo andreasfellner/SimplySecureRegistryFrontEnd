@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'aipoma-ForgotPassword',
+  selector: 'app-ForgotPassword',
   templateUrl: './ForgotPassword.component.html',
   styleUrls: ['./ForgotPassword.component.scss']
 })

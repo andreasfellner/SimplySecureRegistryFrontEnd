@@ -1,6 +1,6 @@
 
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { SourceKeyService, AipomaService } from 'src/app/services/services';
+import { SourceKeyService, AppService } from 'src/app/services/services';
 import { GridComponent } from '@syncfusion/ej2-angular-grids';
 import { SourceKeyDialogComponent } from 'src/app/Global/SourceKeyDialog/SourceKeyDialog.component';
 import { MatDialogRef, MatDialog } from '@angular/material';
@@ -13,10 +13,10 @@ import { MatDialogRef, MatDialog } from '@angular/material';
 export class SourceKeyComponent implements OnInit {
 
   public data: object[];
-  @ViewChild('grid' , { static: false }) public grid: GridComponent;
+  @ViewChild('grid') public grid: GridComponent;
 
   constructor(private sourceKeyService: SourceKeyService,
-              private aipomaService: AipomaService,
+              private appService: AppService,
               private dialog: MatDialog)
   {
 

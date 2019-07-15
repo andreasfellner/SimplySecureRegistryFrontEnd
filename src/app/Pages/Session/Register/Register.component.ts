@@ -3,7 +3,7 @@ import { ApiService } from '../../../services/services';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'aipoma-Register',
+  selector: 'app-Register',
   templateUrl: './Register.component.html',
   styleUrls: ['./Register.component.scss']
 })
