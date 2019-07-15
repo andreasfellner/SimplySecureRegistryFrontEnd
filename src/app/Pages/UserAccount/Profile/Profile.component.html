@@ -1,31 +1,15 @@
-<mat-card>
-  <div class="section-profile">
-     <h4>Profile informasjon</h4>
-     <div class="pt-3">
-       <div class="proflie-field mb-3">
-         <label>First name:</label>
-         <span>{{currentUser.firstName}}</span>
-       </div>
-       <div class="proflie-field mb-3">
-         <label>Last name:</label>
-         <span>{{currentUser.lastName}}</span>
-       </div>
-       <div class="proflie-field mb-3">
-         <label>selskap:</label>
-         <span>{{currentUser.compName}}</span>
-       </div>
-       <div class="proflie-field mb-3">
-         <label>Mobilnummer:</label>
-         <span>{{currentUser.mobileNumber}}</span>
-       </div>
-       <div class="proflie-field mb-3">
-         <label>Email:</label>
-         <span>{{currentUser.email}} </span>
-       </div>
-       <!--
-       <button mat-raised-button color="primary" [routerLink]="['edit']" [queryParams]="{type:'info'}">Redigere</button>
-       -->
-     </div>
-   </div> 
- </mat-card>
- 
+<mat-card class="card-profile-section">
+  <div *ngIf="currentUser" class="section-profile" >
+    <h4>Profile informasjon</h4>
+    <div class="pt-3">
+      <div class="proflie-field mb-3">
+        <label>User Name:</label>
+        <span>{{currentUser.username}}</span>
+      </div>
+      <div class="proflie-field mb-3">
+        <label>Email:</label>
+        <span>{{currentUser.email}}</span>
+      </div>
+    </div>
+  </div>
+</mat-card>

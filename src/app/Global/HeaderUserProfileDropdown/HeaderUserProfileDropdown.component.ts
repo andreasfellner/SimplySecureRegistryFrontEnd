@@ -14,9 +14,9 @@ export class HeaderUserProfileDropdownComponent implements OnInit {
   email : string;
 
   constructor(private router: Router,
-    private authenticationService: ApiService)
+    private apiService: ApiService)
   { 
-      this.authenticationService.currentUser.subscribe(x => {
+      this.apiService.currentUser.subscribe(x => {
         this.currentUser = x;
         if(this.currentUser != null)
         {
@@ -34,7 +34,7 @@ export class HeaderUserProfileDropdownComponent implements OnInit {
   logout() {
 
     //console.log("logout");
-    this.authenticationService.logout();
+    this.apiService.logout();
     //this.router.navigate(['/session/signin']);
   }
 

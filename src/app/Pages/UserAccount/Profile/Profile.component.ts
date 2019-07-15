@@ -10,10 +10,15 @@ import { User } from 'src/app/services/models';
 export class ProfileComponent implements OnInit {
 
   public currentUser: User;
-  constructor(private authenticationService: ApiService) { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-    this.currentUser = this.authenticationService.currentUserValue;
+    this.apiService.currentUser.subscribe(
+      user => {
+        console.log("user", user);
+        this.currentUser = user;
+      }
+    );
   }
 
 }

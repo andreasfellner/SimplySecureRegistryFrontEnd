@@ -1,5 +1,5 @@
 
-<div [dir]="isRtl" (scroll)="onScrollEvent($event)">
+<div (scroll)="onScrollEvent($event)">
   <mat-sidenav-container>
     <mat-sidenav #sidenav [(opened)]="appService.sidenavOpen" class="sidebar-area" mode="over">
       <mat-nav-list>

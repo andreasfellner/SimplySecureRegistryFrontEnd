@@ -20,9 +20,9 @@ export class HeaderComponent implements OnInit {
    constructor(public appService: AppService,
       public translate: TranslateService,
       private router: Router,
-      private authenticationService: ApiService) {
+      private apiService: ApiService) {
 
-      this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+      this.apiService.currentUser.subscribe(x => this.currentUser = x);
    }
 
    ngOnInit() {
