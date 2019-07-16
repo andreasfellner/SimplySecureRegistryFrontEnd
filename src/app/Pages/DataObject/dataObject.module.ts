@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { NgAisModule } from 'angular-instantsearch';
+//import { NgAisModule } from 'angular-instantsearch';
 import { DataObjectRoutes } from './dataObject.routing';
 
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -94,7 +94,7 @@ import { DataObjectComponent } from './DataObject/dataObject.component';
     MatGridListModule,
     MatPaginatorModule,
     GlobalModule,
-    NgAisModule,
+    //NgAisModule,
 
     A11yModule,
     DragDropModule,

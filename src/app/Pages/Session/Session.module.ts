@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { NgAisModule } from 'angular-instantsearch';
+//import { NgAisModule } from 'angular-instantsearch';
 import { SessionRoutes } from './Session.routing';
 import { GlobalModule } from '../../Global/Global.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -66,7 +66,7 @@ import { ForgotPasswordComponent } from './ForgotPassword/ForgotPassword.compone
       MatDialogModule,
       MatGridListModule,
       GlobalModule,
-      NgAisModule
+     // NgAisModule
    ],
    declarations: [
       RegisterComponent,

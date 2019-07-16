@@ -2,7 +2,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { NgAisModule } from 'angular-instantsearch';
+//import { NgAisModule } from 'angular-instantsearch';
 import { SourceKeyRoutes } from './sourceKeys.routing';
 
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -91,7 +91,7 @@ import { SourceKeyComponent } from './SourceKeys/sourceKeys.component';
     MatGridListModule,
     MatPaginatorModule,
     GlobalModule,
-    NgAisModule,
+    //NgAisModule,
 
     A11yModule,
     DragDropModule,
