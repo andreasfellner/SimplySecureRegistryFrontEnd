@@ -25,9 +25,8 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatTreeModule} from '@angular/material/tree';
 
-import { TreeGridModule , PageService, SortService, FilterService } from '@syncfusion/ej2-angular-treegrid';
 import { GridAllModule } from '@syncfusion/ej2-angular-grids';
-import { AngularTreeGridModule } from 'angular-tree-grid';
+
 
 import {
   MatButtonModule,
@@ -108,15 +107,14 @@ import { SourceKeyComponent } from './SourceKeys/sourceKeys.component';
     MatDividerModule,
     MatSlideToggleModule,
     MatTreeModule,
-    TreeGridModule,
     GridAllModule,
-    AngularTreeGridModule
+    
   ],
   declarations: [
     SourceKeyComponent
   ],
   providers: [
-    PageService, SortService, FilterService
+    
   ]
   
 })

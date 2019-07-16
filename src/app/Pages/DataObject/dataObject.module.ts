@@ -24,13 +24,10 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTreeModule } from '@angular/material/tree';
 
-import { TreeGridModule, PageService, SortService, FilterService } from '@syncfusion/ej2-angular-treegrid';
-import { AngularTreeGridModule } from 'angular-tree-grid';
-
 import { FormsModule } from '@angular/forms';
 import { GridModule, EditService, ToolbarService } from '@syncfusion/ej2-angular-grids';
 import { GridAllModule } from '@syncfusion/ej2-angular-grids';
-import { DatePickerAllModule } from '@syncfusion/ej2-angular-calendars';
+
 
 import {
   MatButtonModule,
@@ -111,19 +108,17 @@ import { DataObjectComponent } from './DataObject/dataObject.component';
     MatDividerModule,
     MatSlideToggleModule,
     MatTreeModule,
-    TreeGridModule,
-    AngularTreeGridModule,
     GridAllModule,
     FormsModule,
     GridModule,
-    DatePickerAllModule
+
     
   ],
   declarations: [
     DataObjectComponent
   ],
   providers: [
-    PageService, SortService, FilterService, EditService, ToolbarService, SortService
+      EditService, ToolbarService
   ]
 
 })

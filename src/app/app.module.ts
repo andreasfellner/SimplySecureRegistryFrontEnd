@@ -51,7 +51,6 @@ import { FooterComponent } from './Layouts/Footer/Footer.component';
 import { MenuComponent } from './Layouts/Menu/Menu/Menu.component';
 import { SideBarMenuComponent } from './Layouts/Menu/SidebarMenu/SidebarMenu.component';
 import { FixedHeaderComponent } from './Layouts/Header/FixedHeader/FixedHeader.component';
-import { TreeGridModule, PageService, SortService, FilterService } from '@syncfusion/ej2-angular-treegrid';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
@@ -108,7 +107,7 @@ export function createTranslateLoader(http: HttpClient) {
     ToastaModule.forRoot(),
     BidiModule,
     SlickCarouselModule,
-    TreeGridModule,
+
     TranslateModule.forRoot({
       loader: {
          provide: TranslateLoader,
@@ -119,10 +118,7 @@ export function createTranslateLoader(http: HttpClient) {
   ],
    providers: [
       MenuItems,
-      AppService,
-      PageService,
-      SortService,
-      FilterService
+      AppService
    ],
    bootstrap: [AppComponent]
 })
