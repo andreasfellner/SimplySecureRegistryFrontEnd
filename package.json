@@ -64,7 +64,7 @@
     "@syncfusion/ej2": "^16.4.55",
     "@syncfusion/ej2-angular-grids": "^17.1.51",
     "angular-in-memory-web-api": "0.5.4",
-    "moment": "2.24.0"
+    "moment": "2.29.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.10.6",
